@@ -1,0 +1,124 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: url("https://assets.codepen.io/209981/iStock-1490023614.jpg");
+    background-size: 100% 100%;
+	background-position: center 50%;
+    transition: all ease 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    border: 2px solid #37fffe;
+	box-shadow: -2px 2px #fc00a3;
+}
+body:hover {
+    background-size: 170% 170%;
+}
+
+.container {
+    text-align: center;
+    padding: 30px;
+    max-width: 600px;
+}
+
+.container h2{
+    margin: 0;
+}
+
+h2 {
+	letter-spacing: 0.13em;
+	font-size: 1.7em;
+    font-family: "Henny Penny", cursive;
+	text-shadow: 0 1px #869bf8, -1px 0 #c0cbff, -1px 2px #8da1ff, -2px 1px #c0cbff,
+		-2px 3px #8da1ff, -3px 2px #c0cbff, -3px 4px #8da1ff, -4px 3px #c0cbff,
+		-4px 5px #778ef5, -5px 4px #c0cbff, -5px 6px #8da1ff, -6px 5px #c0cbff;
+	text-align: center;
+}
+
+.title1, .title2, .title3 {
+    color: #0c98cf;
+    margin: 10px 0;
+    display: inline-block;
+    opacity: 0;
+}
+
+@keyframes swing {
+    0% { transform: translateY(0); opacity: 0; }
+    25% { transform: translateY(-10px) translateX(5px); }
+    50% { transform: translateY(10px) translateX(-5px); }
+    75% { transform: translateY(-10px) translateX(5px); }
+    100% { transform: translateY(0); }
+}
+
+.title1 {
+    animation: fadeIn 1s forwards, swing 1.5s 0s ease-in-out forwards;
+    animation-fill-mode: forwards;
+    opacity: 1;
+}
+
+@keyframes zoomIn {
+    0% { transform: scale(1.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.title2 {
+    animation: zoomIn 1s 1.5s forwards;
+}
+
+@keyframes slideUp {
+    0% { transform: translateY(50px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes wave {
+    0%, 100% { transform: translateY(0); }
+    25% { transform: translateY(-5px); }
+    50% { transform: translateY(5px); }
+    75% { transform: translateY(-5px); }
+}
+
+.title3 {
+    animation: slideUp 2.5s 2s forwards;
+}
+
+.title3 span {
+    display: inline-block;
+    animation: wave 1.6s ease-in-out;
+    animation-delay: calc(0.1s * var(--char-index));
+    animation-iteration-count: 1.1;
+    opacity: 1;
+}
+
+.title3 span.space {
+    display: inline-block;
+    width: 0.4em;
+}
+
+
+.game-options{
+    display: grid;
+    margin-top: 20px;
+}
+.game-options a {
+    font-family:  monospace;
+    font-size: 18px;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #a3a7a1;
+    cursor: pointer;
+    color: #302dee;
+}
+
+.game-options a:hover {
+    background-color: #302dee;
+    color: white;
+}
+
+
+
+
+

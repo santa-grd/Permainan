@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Permainan Tebak-Tebakan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2 class="title1">Anda pusing?</h2>
+        <h2 class="title2">Cobalah Permainan Ini</h2>
+        <h2 class="title3">Dijamin Pusing Anda Nambah Lagi!</h2>
+        <div class="game-options">
+            <a href="tktk/tekateki.html" class="game-link">Tanya Jawab</a>
+            <a href="tg/tbkgambar.html" class="game-link">Tebak Gambar</a>
+            <a href="tpg/tebakPotonganGambar.html" class="game-link">Tebak Potongan Gambar</a>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const title3 = document.querySelector(".title3");
+            title3.innerHTML = [...title3.textContent].map((char, index) => {
+                if (char === " ") {
+                    return `<span class="space" style="--char-index: ${index}">${char}</span>`;
+                }
+                return `<span style="--char-index: ${index}">${char}</span>`;
+            }).join("");
+        });       
+    </script>
+</body>
+</html>
