@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tebak Potongan Gambar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h3 class="title">Level <span id="level-number">1</span></h3>
+        <div id="question-container" class="question-container"></div>
+
+        <div id="image-container" class="image-container">
+            <div class="image-piece" id="piece-1"></div>
+            <div class="image-piece" id="piece-2"></div>
+            <div class="image-piece" id="piece-3"></div>
+            <div class="image-piece" id="piece-4"></div>
+            <div class="image-piece" id="piece-5"></div>
+            <div class="image-piece" id="piece-6"></div>
+            <div class="image-piece" id="piece-7"></div>
+            <div class="image-piece" id="piece-8"></div>
+            <div class="image-piece" id="piece-9"></div>
+        </div>
+
+        <input type="text" id="user-answer" placeholder="Ketik jawaban kamu di sini...">
+        <button id="submit-btn" class="submit-btn" onclick="checkAnswer()">Kirim Jawaban</button>
+        <div id="feedback-container" class="feedback-container hidden"></div>
+        <button id="next-btn" class="next-btn hidden" onclick="nextLevel()">BERIKUTNYA</button>
+        <div class="back-to-main">
+            <a href="../index.html" class="back-btn">↵</a>
+        </div>
+    </div>
+    <script src="tebakPotonganGambar.js"></script>
+</body>
+</html>
